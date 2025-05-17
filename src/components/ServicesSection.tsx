@@ -100,22 +100,24 @@ const ServicesSection = () => {
         >
           {services.map((service, index) => (
             <motion.div key={service.title} variants={itemVariants}>
-              <Card 
+              <motion.div 
                 className="backdrop-blur-sm bg-white/90 dark:bg-gray-800/90 border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md transition-all"
                 whileHover={{ y: -5, transition: { duration: 0.2 } }}
               >
-                <CardHeader className="pb-2">
-                  <div className="p-3 w-12 h-12 rounded-lg bg-portfolio-light-blue dark:bg-blue-900/30 flex items-center justify-center mb-4">
-                    {service.icon}
-                  </div>
-                  <CardTitle className="text-gray-800 dark:text-gray-200">{service.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-gray-600 dark:text-gray-300 text-base">
-                    {service.description}
-                  </CardDescription>
-                </CardContent>
-              </Card>
+                <Card>
+                  <CardHeader className="pb-2">
+                    <div className="p-3 w-12 h-12 rounded-lg bg-portfolio-light-blue dark:bg-blue-900/30 flex items-center justify-center mb-4">
+                      {service.icon}
+                    </div>
+                    <CardTitle className="text-gray-800 dark:text-gray-200">{service.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <CardDescription className="text-gray-600 dark:text-gray-300 text-base">
+                      {service.description}
+                    </CardDescription>
+                  </CardContent>
+                </Card>
+              </motion.div>
             </motion.div>
           ))}
         </motion.div>

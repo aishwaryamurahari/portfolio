@@ -91,60 +91,63 @@ const ContactSection = () => {
             <h3 className="text-xl font-semibold mb-6 text-gray-800 dark:text-gray-200">Contact Information</h3>
             
             <div className="space-y-6">
-              <Card 
-                className="p-4 flex items-center space-x-4 backdrop-blur-sm bg-white/90 dark:bg-gray-800/90 border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md transition-all"
+              <motion.div 
                 whileHover={{ y: -5, transition: { duration: 0.2 } }}
               >
-                <div className="bg-portfolio-light-blue dark:bg-blue-900/30 p-3 rounded-full">
-                  <Mail className="text-portfolio-blue" size={22} />
-                </div>
-                <div>
-                  <h4 className="text-sm font-medium text-gray-500 dark:text-gray-400">Email</h4>
-                  <a href="mailto:aishwaryamurahari95@gmail.com" className="text-portfolio-blue hover:underline">
-                    aishwaryamurahari95@gmail.com
-                  </a>
-                </div>
-              </Card>
+                <Card className="p-4 flex items-center space-x-4 backdrop-blur-sm bg-white/90 dark:bg-gray-800/90 border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md transition-all">
+                  <div className="bg-portfolio-light-blue dark:bg-blue-900/30 p-3 rounded-full">
+                    <Mail className="text-portfolio-blue" size={22} />
+                  </div>
+                  <div>
+                    <h4 className="text-sm font-medium text-gray-500 dark:text-gray-400">Email</h4>
+                    <a href="mailto:aishwaryamurahari95@gmail.com" className="text-portfolio-blue hover:underline">
+                      aishwaryamurahari95@gmail.com
+                    </a>
+                  </div>
+                </Card>
+              </motion.div>
               
-              <Card 
-                className="p-4 flex items-center space-x-4 backdrop-blur-sm bg-white/90 dark:bg-gray-800/90 border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md transition-all"
+              <motion.div
                 whileHover={{ y: -5, transition: { duration: 0.2 } }}
               >
-                <div className="bg-portfolio-light-blue dark:bg-blue-900/30 p-3 rounded-full">
-                  <Linkedin className="text-portfolio-blue" size={22} />
-                </div>
-                <div>
-                  <h4 className="text-sm font-medium text-gray-500 dark:text-gray-400">LinkedIn</h4>
-                  <a 
-                    href="https://www.linkedin.com/in/aishwarya-murahari-1b6048106/" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-portfolio-blue hover:underline"
-                  >
-                    aishwarya-murahari
-                  </a>
-                </div>
-              </Card>
+                <Card className="p-4 flex items-center space-x-4 backdrop-blur-sm bg-white/90 dark:bg-gray-800/90 border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md transition-all">
+                  <div className="bg-portfolio-light-blue dark:bg-blue-900/30 p-3 rounded-full">
+                    <Linkedin className="text-portfolio-blue" size={22} />
+                  </div>
+                  <div>
+                    <h4 className="text-sm font-medium text-gray-500 dark:text-gray-400">LinkedIn</h4>
+                    <a 
+                      href="https://www.linkedin.com/in/aishwarya-murahari-1b6048106/" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-portfolio-blue hover:underline"
+                    >
+                      aishwarya-murahari
+                    </a>
+                  </div>
+                </Card>
+              </motion.div>
               
-              <Card 
-                className="p-4 flex items-center space-x-4 backdrop-blur-sm bg-white/90 dark:bg-gray-800/90 border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md transition-all"
+              <motion.div
                 whileHover={{ y: -5, transition: { duration: 0.2 } }}
               >
-                <div className="bg-portfolio-light-blue dark:bg-blue-900/30 p-3 rounded-full">
-                  <Github className="text-portfolio-blue" size={22} />
-                </div>
-                <div>
-                  <h4 className="text-sm font-medium text-gray-500 dark:text-gray-400">GitHub</h4>
-                  <a 
-                    href="https://github.com/aishwaryamurahari" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-portfolio-blue hover:underline"
-                  >
-                    aishwaryamurahari
-                  </a>
-                </div>
-              </Card>
+                <Card className="p-4 flex items-center space-x-4 backdrop-blur-sm bg-white/90 dark:bg-gray-800/90 border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md transition-all">
+                  <div className="bg-portfolio-light-blue dark:bg-blue-900/30 p-3 rounded-full">
+                    <Github className="text-portfolio-blue" size={22} />
+                  </div>
+                  <div>
+                    <h4 className="text-sm font-medium text-gray-500 dark:text-gray-400">GitHub</h4>
+                    <a 
+                      href="https://github.com/aishwaryamurahari" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-portfolio-blue hover:underline"
+                    >
+                      aishwaryamurahari
+                    </a>
+                  </div>
+                </Card>
+              </motion.div>
             </div>
             
             <div className="mt-8">
