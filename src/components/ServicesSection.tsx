@@ -6,6 +6,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { motion } from "framer-motion";
 
 const ServicesSection = () => {
   const services = [
@@ -57,31 +58,67 @@ const ServicesSection = () => {
     },
   ];
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.2 }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: { duration: 0.5 }
+    }
+  };
+
   return (
-    <section id="services" className="py-20">
-      <div className="container mx-auto px-6">
-        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
-          My <span className="text-portfolio-blue">Services</span>
-        </h2>
+    <section id="services" className="py-20 relative overflow-hidden">
+      {/* Background elements */}
+      <div className="absolute -bottom-40 left-20 w-96 h-96 bg-gradient-to-tr from-portfolio-blue/10 to-portfolio-yellow/10 rounded-full blur-3xl"></div>
+      
+      <div className="container mx-auto px-6 relative z-10">
+        <motion.h2 
+          className="text-3xl md:text-4xl font-bold mb-12 text-center"
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
+          My <span className="bg-clip-text text-transparent bg-gradient-to-r from-portfolio-blue to-portfolio-purple">Services</span>
+        </motion.h2>
         
-        <div className="grid md:grid-cols-2 gap-8">
+        <motion.div 
+          className="grid md:grid-cols-2 gap-8"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
           {services.map((service, index) => (
-            <Card 
-              key={service.title}
-              className={`border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md transition-shadow animate-fade-in-delay-${index % 3 + 1}`}
-            >
-              <CardHeader className="pb-2">
-                <div className="mb-4">{service.icon}</div>
-                <CardTitle>{service.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-gray-600 dark:text-gray-300 text-base">
-                  {service.description}
-                </CardDescription>
-              </CardContent>
-            </Card>
+            <motion.div key={service.title} variants={itemVariants}>
+              <Card 
+                className="backdrop-blur-sm bg-white/90 dark:bg-gray-800/90 border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md transition-all"
+                whileHover={{ y: -5, transition: { duration: 0.2 } }}
+              >
+                <CardHeader className="pb-2">
+                  <div className="p-3 w-12 h-12 rounded-lg bg-portfolio-light-blue dark:bg-blue-900/30 flex items-center justify-center mb-4">
+                    {service.icon}
+                  </div>
+                  <CardTitle className="text-gray-800 dark:text-gray-200">{service.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className="text-gray-600 dark:text-gray-300 text-base">
+                    {service.description}
+                  </CardDescription>
+                </CardContent>
+              </Card>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
