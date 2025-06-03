@@ -105,12 +105,11 @@ const HeroSection = () => {
             {/* Card with 3D effect */}
             <div className="bg-gradient-to-br from-portfolio-blue to-portfolio-purple p-[2px] rounded-full shadow-xl transform hover:scale-105 transition-all duration-300 hover:shadow-portfolio-blue/20 hover:shadow-xl">
               <div className="bg-white dark:bg-gray-900 rounded-full overflow-hidden h-64 w-64 md:h-80 md:w-80 relative p-1">
-                {/* Replace with Aishwarya's profile image */}
-                <div className="w-full h-full rounded-full bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900 flex items-center justify-center text-gray-400 overflow-hidden">
-                  <div className="absolute inset-0 bg-white/40 dark:bg-gray-900/40 backdrop-blur-sm flex items-center justify-center">
-                    Profile Image
-                  </div>
-                </div>
+                <img 
+                  src="https://i.postimg.cc/KvdtsHKv/IMG-1509.jpg" 
+                  alt="Aishwarya Murahari"
+                  className="w-full h-full object-cover rounded-full"
+                />
               </div>
             </div>
             
