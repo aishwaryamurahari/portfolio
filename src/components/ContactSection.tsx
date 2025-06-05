@@ -34,7 +34,7 @@ const ContactSection = () => {
       // Send email using EmailJS
       const result = await emailjs.send(
         'service_lrtxvza', // Your service ID
-        '__ejs-test-mail-service__', // Your template ID
+        'template_v2f6veb', // Your template ID
         {
           from_name: formData.name,
           from_email: formData.email,
