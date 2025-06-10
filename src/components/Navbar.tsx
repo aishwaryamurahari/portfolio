@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import ThemeToggle from "./ThemeToggle";
@@ -7,31 +6,31 @@ const Navbar = () => {
   const [activeSection, setActiveSection] = useState("home");
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  
+
   useEffect(() => {
     const handleScroll = () => {
       // Set scrolled state
       setScrolled(window.scrollY > 10);
-      
+
       // Set active section based on scroll position
       const sections = document.querySelectorAll("section");
       const scrollPosition = window.scrollY + 100;
-      
+
       sections.forEach(section => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.offsetHeight;
         const sectionId = section.getAttribute("id") || "";
-        
+
         if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
           setActiveSection(sectionId);
         }
       });
     };
-    
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-  
+
   const navItems = [
     { id: "home", label: "Home" },
     { id: "about", label: "About" },
@@ -41,7 +40,7 @@ const Navbar = () => {
     { id: "services", label: "Services" },
     { id: "contact", label: "Contact" },
   ];
-  
+
   const scrollToSection = (sectionId: string) => {
     const section = document.getElementById(sectionId);
     if (section) {
@@ -55,9 +54,9 @@ const Navbar = () => {
       scrolled ? "bg-white/80 dark:bg-gray-900/80 backdrop-blur-md shadow-sm" : ""
     }`}>
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-        <a 
-          href="#home" 
-          className="text-xl font-bold text-portfolio-blue dark:text-portfolio-blue"
+        <a
+          href="#home"
+          className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-portfolio-blue to-portfolio-purple"
           onClick={(e) => {
             e.preventDefault();
             scrollToSection("home");
@@ -65,13 +64,17 @@ const Navbar = () => {
         >
           AM
         </a>
-        
+
         <div className="hidden md:flex items-center gap-8">
           {navItems.map(item => (
             <a
               key={item.id}
               href={`#${item.id}`}
-              className={`nav-link ${activeSection === item.id ? "active" : ""}`}
+              className={`px-4 py-2 rounded-lg transition-colors ${
+                activeSection === item.id
+                  ? "bg-portfolio-light-blue text-portfolio-blue"
+                  : "text-gray-600 dark:text-gray-300 hover:text-portfolio-blue dark:hover:text-portfolio-blue"
+              }`}
               onClick={(e) => {
                 e.preventDefault();
                 scrollToSection(item.id);
@@ -81,10 +84,10 @@ const Navbar = () => {
             </a>
           ))}
         </div>
-        
+
         <div className="flex items-center gap-4">
           <ThemeToggle />
-          
+
           <Button
             variant="outline"
             size="icon"
@@ -126,7 +129,7 @@ const Navbar = () => {
           </Button>
         </div>
       </div>
-      
+
       {/* Mobile Menu */}
       <div
         className={`fixed inset-0 bg-white dark:bg-gray-900 z-40 transition-transform duration-300 transform ${
@@ -139,8 +142,8 @@ const Navbar = () => {
               key={item.id}
               href={`#${item.id}`}
               className={`text-lg font-medium px-4 py-2 rounded-md ${
-                activeSection === item.id 
-                  ? "bg-portfolio-light-blue text-portfolio-blue dark:bg-gray-800" 
+                activeSection === item.id
+                  ? "bg-[#556b2f]/10 text-[#556b2f] dark:bg-[#556b2f]/20"
                   : "text-gray-800 dark:text-gray-200"
               }`}
               onClick={(e) => {

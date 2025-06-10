@@ -1,4 +1,3 @@
-
 import {
   Card,
   CardContent,
@@ -78,10 +77,10 @@ const ServicesSection = () => {
   return (
     <section id="services" className="py-20 relative overflow-hidden">
       {/* Background elements */}
-      <div className="absolute -bottom-40 left-20 w-96 h-96 bg-gradient-to-tr from-portfolio-blue/10 to-portfolio-yellow/10 rounded-full blur-3xl"></div>
-      
+      <div className="absolute -bottom-40 left-20 w-96 h-96 bg-gradient-to-tr from-[#556b2f]/10 to-[#556b2f]/10 rounded-full blur-3xl"></div>
+
       <div className="container mx-auto px-6 relative z-10">
-        <motion.h2 
+        <motion.h2
           className="text-3xl md:text-4xl font-bold mb-12 text-center"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -90,8 +89,8 @@ const ServicesSection = () => {
         >
           My <span className="bg-clip-text text-transparent bg-gradient-to-r from-portfolio-blue to-portfolio-purple">Services</span>
         </motion.h2>
-        
-        <motion.div 
+
+        <motion.div
           className="grid md:grid-cols-2 gap-8"
           variants={containerVariants}
           initial="hidden"
@@ -100,13 +99,13 @@ const ServicesSection = () => {
         >
           {services.map((service, index) => (
             <motion.div key={service.title} variants={itemVariants}>
-              <motion.div 
+              <motion.div
                 className="backdrop-blur-sm bg-white/90 dark:bg-gray-800/90 border-gray-100 dark:border-gray-700 shadow-sm hover:shadow-md transition-all"
                 whileHover={{ y: -5, transition: { duration: 0.2 } }}
               >
                 <Card>
                   <CardHeader className="pb-2">
-                    <div className="p-3 w-12 h-12 rounded-lg bg-portfolio-light-blue dark:bg-blue-900/30 flex items-center justify-center mb-4">
+                    <div className="p-3 w-12 h-12 rounded-lg bg-[#556b2f]/10 dark:bg-[#556b2f]/30 flex items-center justify-center mb-4">
                       {service.icon}
                     </div>
                     <CardTitle className="text-gray-800 dark:text-gray-200">{service.title}</CardTitle>

@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Github, ExternalLink } from "lucide-react";
 import { useState } from "react";
@@ -22,29 +21,29 @@ const ProjectsSection = () => {
       id: "automotive-inventory",
       title: "Automotive Inventory Platform",
       description: "A comprehensive inventory management system for automotive dealerships with real-time updates, analytics dashboard, and customer-facing search portal.",
-      tags: ["React", "Node.js", "MongoDB", "Docker", "AWS"],
-      githubUrl: "https://github.com/aishwaryamurahari/automotive-inventory",
+      tags: ["React", "Node.js", "MongoDB", "Docker", "Kubernetes", "AWS", "Microservices"],
+      githubUrl: "https://github.com/TechTitans-SJSU/CarParts_Ecommerce",
     },
     {
       id: "nutrition-chatbot",
       title: "Nutrition Intelligence Chatbot",
       description: "AI-driven chatbot that provides personalized nutrition advice and meal planning based on dietary preferences and health goals.",
       tags: ["Python", "NLP", "Machine Learning", "Flask", "React"],
-      githubUrl: "https://github.com/aishwaryamurahari/nutrition-intelligence",
+      githubUrl: "https://github.com/TechTitans-SJSU/FAO_Chatbot",
     },
     {
       id: "distributed-retrieval",
       title: "Distributed Retrieval Framework",
-      description: "A scalable framework for high-performance distributed data retrieval across multiple data stores with consistent hashing and fault tolerance.",
-      tags: ["Java", "Kafka", "Redis", "Kubernetes", "Distributed Systems"],
-      githubUrl: "https://github.com/aishwaryamurahari/distributed-retrieval",
+      description: "A scalable blockchain-inspired framework for distributed data integrity, client coordination, and fault tolerance.",
+      tags: ["Python", "Blockchain", "Distributed Systems"],
+      githubUrl: "https://github.com/BitManipulators/275_block_chain",
     },
     {
       id: "qt-game-suite",
       title: "Qt Game Suite",
       description: "A collection of interactive games developed with Qt framework, featuring cross-platform compatibility and modern UI/UX design.",
-      tags: ["C++", "Qt", "OpenGL", "Game Development"],
-      githubUrl: "https://github.com/aishwaryamurahari/qt-game-suite",
+      tags: ["C++", "Qt", "Game Development"],
+      githubUrl: "https://github.com/BitManipulators/202_PokerGame",
     },
   ];
 
@@ -74,11 +73,11 @@ const ProjectsSection = () => {
   return (
     <section id="projects" className="py-20 bg-gray-50/80 dark:bg-gray-900/80 relative overflow-hidden">
       {/* Background elements */}
-      <div className="absolute -top-40 right-10 w-96 h-96 bg-gradient-to-bl from-portfolio-purple/10 to-portfolio-blue/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-20 -left-20 w-96 h-96 bg-gradient-to-tr from-portfolio-yellow/10 to-portfolio-purple/10 rounded-full blur-3xl"></div>
-      
+      <div className="absolute -top-40 right-10 w-96 h-96 bg-gradient-to-bl from-[#556b2f]/10 to-[#556b2f]/10 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-20 -left-20 w-96 h-96 bg-gradient-to-tr from-[#556b2f]/10 to-[#556b2f]/10 rounded-full blur-3xl"></div>
+
       <div className="container mx-auto px-6 relative z-10">
-        <motion.h2 
+        <motion.h2
           className="text-3xl md:text-4xl font-bold mb-12 text-center"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -88,7 +87,7 @@ const ProjectsSection = () => {
           Featured <span className="bg-clip-text text-transparent bg-gradient-to-r from-portfolio-blue to-portfolio-purple">Projects</span>
         </motion.h2>
 
-        <motion.div 
+        <motion.div
           className="flex flex-wrap justify-center gap-3 mb-10"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -103,7 +102,7 @@ const ProjectsSection = () => {
           >
             All
           </Button>
-          
+
           {allTags.map(tag => (
             <Button
               key={tag}
@@ -117,7 +116,7 @@ const ProjectsSection = () => {
           ))}
         </motion.div>
 
-        <motion.div 
+        <motion.div
           className="grid md:grid-cols-2 gap-8"
           variants={containerVariants}
           initial="hidden"
@@ -125,7 +124,7 @@ const ProjectsSection = () => {
           viewport={{ once: true }}
         >
           {filteredProjects.map((project) => (
-            <motion.div 
+            <motion.div
               key={project.id}
               variants={itemVariants}
               className="bg-white/90 dark:bg-gray-800/90 rounded-xl overflow-hidden shadow-md border border-gray-100 dark:border-gray-700 hover:shadow-xl transition-all backdrop-blur-sm"
@@ -135,18 +134,18 @@ const ProjectsSection = () => {
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-3 text-gray-800 dark:text-gray-200">{project.title}</h3>
                 <p className="text-gray-600 dark:text-gray-300 mb-4 leading-relaxed">{project.description}</p>
-                
+
                 <div className="flex flex-wrap gap-2 mb-6">
                   {project.tags.map(tag => (
-                    <span 
+                    <span
                       key={`${project.id}-${tag}`}
-                      className="text-xs bg-portfolio-light-blue text-portfolio-blue dark:bg-blue-900/30 dark:text-blue-300 py-1 px-3 rounded-full font-medium"
+                      className="text-xs bg-portfolio-light-blue text-portfolio-blue dark:bg-blue-900/30 dark:text-portfolio-blue py-1 px-3 rounded-full font-medium"
                     >
                       {tag}
                     </span>
                   ))}
                 </div>
-                
+
                 <div className="flex gap-4">
                   {project.githubUrl && (
                     <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
@@ -155,7 +154,7 @@ const ProjectsSection = () => {
                       </Button>
                     </a>
                   )}
-                  
+
                   {project.demoUrl && (
                     <a href={project.demoUrl} target="_blank" rel="noopener noreferrer">
                       <Button size="sm" className="flex items-center gap-2 bg-gradient-to-r from-portfolio-blue to-portfolio-purple hover:opacity-90">
