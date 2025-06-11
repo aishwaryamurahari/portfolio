@@ -1,73 +1,86 @@
-# Welcome to your Lovable project
+# Aishwarya Murahari Portfolio Site
 
-## Project info
+A modern, responsive portfolio website built with React, TypeScript, and Tailwind CSS. This portfolio showcases my work, skills, and professional journey.
 
-**URL**: https://lovable.dev/projects/1fcd948a-5982-48ca-9160-a365105ae24b
+## 🚀 Features
 
-## How can I edit this code?
+- Responsive design that works on all devices
+- Modern UI with smooth animations using Framer Motion
+- Dark/Light mode support
+- Contact form with EmailJS integration
+- Interactive components using shadcn/ui
+- Optimized performance with Vite
+- Type-safe development with TypeScript
 
-There are several ways of editing your application.
+## 🛠️ Technologies Used
 
-**Use Lovable**
+- [React](https://reactjs.org/) - Frontend library
+- [TypeScript](https://www.typescriptlang.org/) - Type-safe JavaScript
+- [Vite](https://vitejs.dev/) - Next Generation Frontend Tooling
+- [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
+- [shadcn/ui](https://ui.shadcn.com/) - Re-usable components
+- [Framer Motion](https://www.framer.com/motion/) - Animation library
+- [React Router](https://reactrouter.com/) - Client-side routing
+- [EmailJS](https://www.emailjs.com/) - Email service integration
+- [React Query](https://tanstack.com/query/latest) - Data fetching and caching
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/1fcd948a-5982-48ca-9160-a365105ae24b) and start prompting.
+## 🏗️ Project Structure
 
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```
+src/
+├── components/     # Reusable UI components
+├── pages/         # Page components
+├── styles/        # Global styles and Tailwind config
+├── utils/         # Utility functions
+├── hooks/         # Custom React hooks
+├── types/         # TypeScript type definitions
+└── assets/        # Static assets (images, fonts, etc.)
 ```
 
-**Edit a file directly in GitHub**
+## 🚀 Getting Started
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Prerequisites
 
-**Use GitHub Codespaces**
+- Node.js (v16 or higher)
+- npm or yarn
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### Installation
 
-## What technologies are used for this project?
+1. Clone the repository:
+```bash
+git clone https://github.com/aishwaryamurahari/portfolio.git
+cd portfolio
+```
 
-This project is built with:
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+3. Start the development server:
+```bash
+npm run dev
+# or
+yarn dev
+```
 
-## How can I deploy this project?
+4. Open [http://localhost:5173](http://localhost:5173) in your browser.
 
-Simply open [Lovable](https://lovable.dev/projects/1fcd948a-5982-48ca-9160-a365105ae24b) and click on Share -> Publish.
+## 📦 Available Scripts
 
-## Can I connect a custom domain to my Lovable project?
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build
+- `npm run lint` - Run ESLint
+- `npm run deploy` - Deploy to GitHub Pages
 
-Yes, you can!
+## 🎨 Customization
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+1. Update personal information in the relevant components
+2. Modify the theme colors in `tailwind.config.ts`
+3. Add or remove sections as needed
+4. Customize animations in components using Framer Motion
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+
