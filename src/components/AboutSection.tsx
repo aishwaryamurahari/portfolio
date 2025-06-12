@@ -65,7 +65,11 @@ const AboutSection = () => {
                   className="flex items-center gap-2 bg-gradient-to-r from-portfolio-blue to-portfolio-purple hover:opacity-90 shadow-md hover:shadow-lg transition-all"
                   asChild
                 >
-                  <a href="/Aishwarya_Murahari Resume.pdf" download>
+                  <a
+                    href="/Aishwarya_Murahari Resume.pdf"
+                    download="Aishwarya_Murahari_Resume.pdf"
+                    type="application/pdf"
+                  >
                     <FileText size={18} /> Download Resume
                   </a>
                 </Button>
