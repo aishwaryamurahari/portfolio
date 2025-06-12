@@ -66,7 +66,7 @@ const AboutSection = () => {
                   asChild
                 >
                   <a
-                    href="/Aishwarya_Murahari Resume.pdf"
+                    href="/Aishwarya_Murahari_Resume.pdf"
                     download="Aishwarya_Murahari_Resume.pdf"
                     type="application/pdf"
                   >
