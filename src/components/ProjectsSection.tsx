@@ -27,7 +27,7 @@ const ProjectsSection = () => {
     {
       id: "nutrition-chatbot",
       title: "Nutrition Intelligence Chatbot",
-      description: "AI-driven chatbot that provides personalized nutrition advice and meal planning based on dietary preferences and health goals.",
+      description: "AI-powered nutrition chatbot using RAG architecture (Python, LangChain, HuggingFace) to extract insights from multiple PDF reports. Implemented semantic search with vector embeddings and Redis caching, and developed a responsive React/TypeScript frontend with a conversational UX.",
       tags: ["Python", "NLP", "Machine Learning", "Flask", "React"],
       githubUrl: "https://github.com/TechTitans-SJSU/FAO_Chatbot",
     },
