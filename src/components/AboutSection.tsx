@@ -1,7 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { FileText } from "lucide-react";
 import { motion } from "framer-motion";
+import { useAnalytics } from "@/hooks/use-analytics";
 const AboutSection = () => {
+  const { createResumeDownloadHandler } = useAnalytics();
+
   const containerVariants = {
     hidden: {
       opacity: 0
@@ -68,6 +71,7 @@ const AboutSection = () => {
                   <a
                     href="/portfolio/Aishwarya_Murahari_Resume.pdf"
                     download
+                    onClick={createResumeDownloadHandler()}
                   >
                     <FileText size={18} /> Download Resume
                   </a>

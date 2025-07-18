@@ -7,8 +7,11 @@ import { Card } from "@/components/ui/card";
 import { Github, Linkedin, Mail, Send } from "lucide-react";
 import { motion } from "framer-motion";
 import emailjs from '@emailjs/browser';
+import { useAnalytics } from "@/hooks/use-analytics";
 
 const ContactSection = () => {
+  const { trackContactSubmission, createExternalLinkHandler } = useAnalytics();
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -45,6 +48,9 @@ const ContactSection = () => {
       );
 
       console.log('Email sent successfully:', result);
+
+      // Track successful contact submission
+      trackContactSubmission();
 
       toast({
         title: "Message sent!",
@@ -120,7 +126,11 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <h4 className="text-sm font-medium text-gray-500 dark:text-gray-400">Email</h4>
-                    <a href="mailto:aishwaryamurahari95@gmail.com" className="text-portfolio-blue hover:underline">
+                    <a
+                      href="mailto:aishwaryamurahari95@gmail.com"
+                      className="text-portfolio-blue hover:underline"
+                      onClick={() => createExternalLinkHandler('email', 'mailto:aishwaryamurahari95@gmail.com')()}
+                    >
                       aishwaryamurahari95@gmail.com
                     </a>
                   </div>
@@ -141,8 +151,9 @@ const ContactSection = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-portfolio-blue hover:underline"
+                      onClick={() => createExternalLinkHandler('linkedin', 'https://www.linkedin.com/in/aishwarya-murahari-1b6048106/')()}
                     >
-                      aishwarya-murahari
+                      aishwaryamurahari
                     </a>
                   </div>
                 </Card>
@@ -162,6 +173,7 @@ const ContactSection = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-portfolio-blue hover:underline"
+                      onClick={() => createExternalLinkHandler('github', 'https://github.com/aishwaryamurahari')()}
                     >
                       aishwaryamurahari
                     </a>
