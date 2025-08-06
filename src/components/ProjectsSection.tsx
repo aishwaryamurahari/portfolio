@@ -18,6 +18,20 @@ const ProjectsSection = () => {
 
   const projects: Project[] = [
     {
+      id: "flowagent",
+      title: "FlowAgent",
+      description: "An autonomous assistant that converts emails into actionable Notion tasks. Features Google Authentication, inbox processing, automatic task extraction with due dates and priorities, and seamless integration with Notion databases for productivity enhancement.",
+      tags: ["Next.js", "React", "TypeScript", "Tailwind CSS", "NextAuth.js", "Google APIs", "Notion API"],
+      githubUrl: "https://github.com/aishwaryamurahari/flowagent",
+    },
+    {
+      id: "noted",
+      title: "Noted - Chrome Extension",
+      description: "A full-stack Chrome Extension that summarizes web articles using OpenAI GPT-3.5 and saves them to Notion workspace. Features smart AI categorization, OAuth authentication, and organized content management with automatic topic classification.",
+      tags: ["Chrome Extension", "FastAPI", "Python", "JavaScript", "OpenAI API", "Notion API", "SQLite", "OAuth"],
+      githubUrl: "https://github.com/aishwaryamurahari/Noted",
+    },
+    {
       id: "automotive-inventory",
       title: "Automotive Inventory Platform",
       description: "A comprehensive inventory management system for automotive dealerships with real-time updates, analytics dashboard, and customer-facing search portal.",
