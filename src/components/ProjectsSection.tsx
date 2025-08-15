@@ -72,10 +72,6 @@ const ProjectsSection = () => {
     ? projects.filter(project => project.tags.includes(filter))
     : projects;
 
-  // Debug logging
-  console.log('Current filter:', filter);
-  console.log('Filtered projects count:', filteredProjects.length);
-
   const allTags = Array.from(new Set(projects.flatMap(project => project.tags)));
 
   const containerVariants = {
