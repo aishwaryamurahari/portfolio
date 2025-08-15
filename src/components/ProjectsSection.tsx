@@ -59,11 +59,22 @@ const ProjectsSection = () => {
       tags: ["C++", "Qt", "Game Development"],
       githubUrl: "https://github.com/BitManipulators/202_PokerGame",
     },
+    {
+      id: "byos-go",
+      title: "GoServe - Build Your Own Server (BYOS)",
+      description: "A from-scratch HTTP server implementation in Go demonstrating low-level network programming without web frameworks. Features raw TCP socket handling, custom HTTP parser, flexible routing system, concurrent request handling with goroutines, and security features like directory traversal prevention.",
+      tags: ["Go", "HTTP", "TCP", "Networking", "Concurrency", "Server", "Systems Programming"],
+      githubUrl: "https://github.com/aishwaryamurahari/byos-go",
+    },
   ];
 
   const filteredProjects = filter
     ? projects.filter(project => project.tags.includes(filter))
     : projects;
+
+  // Debug logging
+  console.log('Current filter:', filter);
+  console.log('Filtered projects count:', filteredProjects.length);
 
   const allTags = Array.from(new Set(projects.flatMap(project => project.tags)));
 
@@ -134,12 +145,12 @@ const ProjectsSection = () => {
           className="grid md:grid-cols-2 gap-8"
           variants={containerVariants}
           initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
+          animate="visible"
+          key={filter || "all"}
         >
           {filteredProjects.map((project) => (
             <motion.div
-              key={project.id}
+              key={`${filter || 'all'}-${project.id}`}
               variants={itemVariants}
               className="bg-white/90 dark:bg-gray-800/90 rounded-xl overflow-hidden shadow-md border border-gray-100 dark:border-gray-700 hover:shadow-xl transition-all backdrop-blur-sm"
               whileHover={{ y: -5, transition: { duration: 0.2 } }}
