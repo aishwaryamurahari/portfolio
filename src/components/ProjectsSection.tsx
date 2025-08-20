@@ -26,7 +26,7 @@ const ProjectsSection = () => {
     },
     {
       id: "noted",
-      title: "Noted - Chrome Extension",
+      title: "Noted - Web Article Summarizer",
       description: "A full-stack Chrome Extension that summarizes web articles using OpenAI GPT-3.5 and saves them to Notion workspace. Features smart AI categorization, OAuth authentication, and organized content management with automatic topic classification.",
       tags: ["Chrome Extension", "FastAPI", "Python", "JavaScript", "OpenAI API", "Notion API", "SQLite", "OAuth"],
       githubUrl: "https://github.com/aishwaryamurahari/Noted",
@@ -61,7 +61,7 @@ const ProjectsSection = () => {
     },
     {
       id: "byos-go",
-      title: "GoServe - Build Your Own Server (BYOS)",
+      title: "GoServe - Custom HTTP Server",
       description: "A from-scratch HTTP server implementation in Go demonstrating low-level network programming without web frameworks. Features raw TCP socket handling, custom HTTP parser, flexible routing system, concurrent request handling with goroutines, and security features like directory traversal prevention.",
       tags: ["Go", "HTTP", "TCP", "Networking", "Concurrency", "Server", "Systems Programming"],
       githubUrl: "https://github.com/aishwaryamurahari/byos-go",
