@@ -69,7 +69,7 @@ const AboutSection = () => {
                   asChild
                 >
                   <a
-                    href="/portfolio/Aishwarya_Murahari_Resume.pdf"
+                    href="/aishwarya-murahari-portfolio-site/Aishwarya_Murahari_Resume.pdf"
                     download
                     onClick={createResumeDownloadHandler()}
                   >
